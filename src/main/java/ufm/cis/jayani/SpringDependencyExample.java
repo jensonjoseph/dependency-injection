@@ -1,5 +1,4 @@
-package net.codejava;
-
+package ufm.cis.jayani;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -9,8 +8,8 @@ public class SpringDependencyExample {
 
         ApplicationContext appContext = new ClassPathXmlApplicationContext("classpath:applicationContext.xml");
 
-        Client client = (Client) appContext.getBean("client1");
-        client.doSomething();
+        ufm.cis.jayani.di.House house = (ufm.cis.jayani.di.House) appContext.getBean("house");
+        house.doSomething();
     }
 
 }

@@ -5,9 +5,10 @@
                 http://www.springframework.org/schema/beans
                 http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="service1" class="net.codejava.ServiceB"/>
+    <bean id="wooden" class="ufm.cis.jayani.di.WoodenDoor"/>
+    <bean id="glass" class="ufm.cis.jayani.di.GlassDoor"/>
 
-    <bean id="client1" class="net.codejava.ClientA">
-        <constructor-arg ref="service1"/>
+    <bean id="house" class="ufm.cis.jayani.di.HouseImpl">
+        <constructor-arg ref="wooden"/>
     </bean>
 </beans>
